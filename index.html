@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinthahousie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #128c7e;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+            
+        }
+        h1 {
+            margin: 0;
+           
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(3, 2, 0, 0.1);
+        }
+        .container h2 {
+            margin: 10px;
+            text-align: center;
+        
+        }
+        .agent-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            
+        }
+        .agent {
+            text-align: center;
+            border: 5px 4px 5px 5px solid #dfd;
+            padding: 15px;
+            border-radius: 10px;
+            background: #f0f0f0;
+        }
+        .agent img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .agent h4 {
+            margin: 10px 0 5px;
+        }
+        .agent a {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            
+        }
+        .agent a img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+        .agent a:hover {
+            background-color: #1da853;
+        }
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .modal-content {
+            position: relative;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .modal-content h3 {
+            margin: 10px 0 0;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #ff5b5b;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .close-btn:hover {
+            background: #ff0000;
+        }
+        
+        .group-section {
+        text-align: center;
+        margin-top: 30px;
+        padding: 20px;
+        border-top: 1px solid #ddd;
+        }
+        .group-section img {
+        width: 250px;
+        height: 250px;
+        margin: 10px auto;
+        display: block;
+        
+        }
+        .group-section a {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #25d366;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        }
+        .group-section a:hover {
+        background-color: #1da853;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 data-aos="fade-right">Welcome to Sinthahousie</h1>
+    </header>
+
+    <div class="container">
+    <h2 data-aos="fade-left">Our Agents</h2>
+    <div class="agent-list">
+    <!-- Agent 1 -->
+    <div class="agent" data-aos="fade-right">
+    <img src="https://github.com/Anandkhuman/Photo/raw/main/anand.jpg" alt="Anand Khuman" data-name="Anand Khuman">
+    <h4>Anand Khuman</h4>
+    <p>Contact: 9366193440</p>
+    <a href="https://wa.me/9366193440" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    Chat on WhatsApp
+    </a>
+    </div>
+    <!-- Agent 2 -->
+    <div class="agent" data-aos="fade-left" data-aos-delay="100">
+    <img src="https://github.com/Anandkhuman/Photo/raw/main/sadananda.jpg" alt="Sadananda Mangang" data-name="Sadananda Mangang">
+    <h4>Sadananda Mangang</h4>
+    <p>Contact: 6009020876</p>
+    <a href="https://wa.me/6009020876" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    Chat on WhatsApp
+    </a>
+    </div>
+    <!-- Agent 3 -->
+    <div class="agent" data-aos="fade-right" data-aos-delay="200">
+    <img src="https://github.com/Anandkhuman/Photo/raw/main/kenedy.jpg" alt="Kenedy Khuman" data-name="Kenedy Khuman">
+    <h4>Kenedy Khuman</h4>
+    <p>Contact: 6009063472</p>
+    <a href="https://wa.me/6009063472" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    Chat on WhatsApp
+    </a>
+    </div>
+    <!-- Agent 4 -->
+    <div class="agent" data-aos="fade-left" data-aos-delay="300">
+    <img src="https://github.com/Anandkhuman/Photo/raw/main/pari.jpg" alt="Pari" data-name="Pari">
+    <h4>Pari</h4>
+    <p>Contact: 8415934211</p>
+    <a href="https://wa.me/8415934211" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Icon">
+    Chat on WhatsApp
+    </a>
+    </div>
+    </div>
+    </div>
+    
+    <!-- WhatsApp Group Section -->
+    <div class="group-section" data-aos="fade-up" data-aos-delay="400">
+    <h2>Join Our WhatsApp Group</h2>
+    <img src="https://github.com/Anandkhuman/Photo/raw/main/qr.png" alt="WhatsApp Group QR Code">
+    <a href="https://chat.whatsapp.com/LYEAapkNVroIn8tsrB9LTc" target="_blank">Join the Group</a>
+    </div>
+    
+    
+
+    <!-- Modal -->
+    <div class="modal" id="imageModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <img src="" alt="Agent Image" id="modalImage">
+            <h3 id="modalName">Agent Name</h3>
+        </div>
+    </div>
+
+    <script>
+        // Modal functionality
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalName = document.getElementById('modalName');
+        const closeModal = document.getElementById('closeModal');
+        const agentImages = document.querySelectorAll('.agent img');
+
+        // Open modal
+        agentImages.forEach(image => {
+            image.addEventListener('click', () => {
+                modal.style.display = 'flex';
+                modalImage.src = image.src;
+                modalName.textContent = image.getAttribute('data-name');
+            });
+        });
+
+        // Close modal
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        // Close modal on outside click
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    
+    <script>
+    // Initialize AOS
+    AOS.init({
+    duration: 1500,  // Animation duration in milliseconds
+    });
+    </script>
+</body>
+</html>
